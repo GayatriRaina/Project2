@@ -11,11 +11,11 @@ public class PagesMethods extends AutomationUtilities{
     public void verify() throws InterruptedException {
         driver = super.Initialization();
         Pages page = new Pages(driver);
-//        page.contactus();
-//        page.verifytestcasespage();
+        page.contactus();
+        page.verifytestcasespage();
         page.productdetailpage();
-//        page.searchproduct();
-//        page.HomePageSubscription();
-//        page.CartSubscription();
+        page.searchproduct();
+        page.HomePageSubscription();
+        page.CartSubscription();
     }
 }
