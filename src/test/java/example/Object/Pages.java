@@ -1,6 +1,7 @@
 package example.Object;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -43,7 +44,16 @@ public class Pages {
     By p28 = By.xpath("//button[@id=\"subscribe\"]");
     By p29 = By.xpath("//*[@id=\"success-subscribe\"]/div");
     By p30 = By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a");
-//    By p31 = By.xpath("//*[@id=\"footer\"]/div[1]/div/div/div[2]/div/h2")
+    By p31 = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div/div[2]/div/div[1]/div[1]/a");
+    By p32 = By.xpath("//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u");
+    By p33 = By.xpath("//a[@href=\"/view_cart\"]");
+    By p34 = By.xpath("//*[@id=\"product-1\"]/td[3]/p");
+    By p35 = By.xpath("//*[@id=\"product-1\"]/td[4]/button");
+    By p36 = By.xpath("//*[@id=\"product-1\"]/td[5]/p");
+    By p37 = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li/a");
+    By p38 = By.xpath("//*[@id=\"quantity\"]");
+    By p39 = By.xpath("/html/body/section/div/div/div[2]/div[2]/div[2]/div/span/button");
+    By p40 = By.xpath("//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u");
     public void contactus() throws InterruptedException {
         driver.get(url);
         driver.findElement(p1).getText();
@@ -85,6 +95,8 @@ public class Pages {
         driver.findElement(p14).click();
         driver.findElement(p22).getText();
         System.out.println("Verify All Products");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)");
         driver.findElement(p15).click();
         driver.findElement(p16).getText();
         System.out.println("Verify Product name");
@@ -142,5 +154,43 @@ public class Pages {
         System.out.println("Verify alert msg");
     }
 
-    
-}
+    public void AddingProductToCart() {
+        driver.findElement(p1).getText();
+        driver.get(url);
+        System.out.println("verify home page");
+        driver.findElement(p14).click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,700)");
+        Actions actions = new Actions(driver);
+        WebElement product = driver.findElement(p31);
+        actions.moveToElement(product);
+        driver.findElement(p32).click();
+        driver.findElement(p33).getText();
+        System.out.println("Verify Cart page");
+        driver.findElement(p34).getText();
+        System.out.println("verify Price");
+        driver.findElement(p35).getText();
+        System.out.println("verify Quantity");
+        driver.findElement(p36).getText();
+        System.out.println("verify Total Price");
+        }
+
+        public void VerifyProduct() {
+            driver.get(url);
+            driver.findElement(p1).getText();
+            System.out.println("verify home page");
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("window.scrollBy(0,700)");
+            driver.findElement(p37).click();
+            driver.findElement(p16).getText();
+            System.out.println("Verify Product name");
+            WebElement element = driver.findElement(p38);
+            element.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), "4");
+            driver.findElement(p39).click();
+            driver.findElement(p40).click();
+            driver.findElement(p33).getText();
+            System.out.println("Verify Cart page");
+
+        }
+
+    }

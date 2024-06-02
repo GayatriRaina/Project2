@@ -17,5 +17,7 @@ public class PagesMethods extends AutomationUtilities{
         page.searchproduct();
         page.HomePageSubscription();
         page.CartSubscription();
+        page.AddingProductToCart();
+        page.VerifyProduct();
     }
 }
