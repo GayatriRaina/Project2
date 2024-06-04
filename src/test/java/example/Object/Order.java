@@ -14,7 +14,6 @@ public class Order {
     }
 
     String url = "https://automationexercise.com/";// url
-    String url2 = "https://automationexercise.com/payment";
     By g1 = By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[1]/a");
     By g2 = By.xpath("/html/body/section[2]/div/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[1]/a");
     By g3 = By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[3]/a");
@@ -66,8 +65,8 @@ public class Order {
     By s33 = By.xpath("//input[@data-qa=\"login-password\"]");
     By s34 = By.xpath("//button[@data-qa=\"login-button\"]");
     By g48 = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div[1]/div[1]/div/div/div[2]/p[2]/a");
-    By g49 = By.xpath("/html/body/div/div/div[1]/div[1]/div/svg");
-    By g50 = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div[1]/div[2]/div/div[1]/div[1]/a");
+    By g49 = By.xpath("//a[@class=\"cart_quantity_delete\"]");
+    By g50 = By.xpath("//*[@id=\"empty_cart\"]/p/b");
 
     public void registerwhilecheckout() throws InterruptedException {
         driver.get(url);
@@ -245,6 +244,21 @@ public class Order {
             driver.findElement(g41).getText();
             System.out.println("Verify Account Deleted!");
             driver.findElement(g42).click();
+    }
 
+    public void removeproduct() throws InterruptedException {
+        driver.get(url);
+        driver.findElement(g1).getText();
+        System.out.println("verify home page");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+        driver.findElement(g2).click();
+        Thread.sleep(1000);
+        driver.findElement(g48).click();
+        driver.findElement(g3).getText();
+        System.out.println("Verify Cart page");
+        driver.findElement(g49).click();
+        driver.findElement(g50).getText();
+        System.out.println("Verify Cart is Empty");
     }
 }
