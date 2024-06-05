@@ -15,5 +15,7 @@ public class OrderMethods extends AutomationUtilities {
         obj.registerbeforecheckout();
         obj.loginbeforecheckout();
         obj.removeproduct();
+        obj.verifyaddressincheckoutpage();
+
     }
 }

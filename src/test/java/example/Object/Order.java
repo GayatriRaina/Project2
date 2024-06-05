@@ -67,6 +67,10 @@ public class Order {
     By g48 = By.xpath("/html/body/section[2]/div[1]/div/div[2]/div[1]/div[1]/div/div/div[2]/p[2]/a");
     By g49 = By.xpath("//a[@class=\"cart_quantity_delete\"]");
     By g50 = By.xpath("//*[@id=\"empty_cart\"]/p/b");
+    By g51 = By.xpath("//*[@id=\"address_delivery\"]/li[1]/h3");
+    By g52 = By.xpath("//*[@id=\"address_invoice\"]/li[1]/h3");
+
+
 
     public void registerwhilecheckout() throws InterruptedException {
         driver.get(url);
@@ -260,5 +264,61 @@ public class Order {
         driver.findElement(g49).click();
         driver.findElement(g50).getText();
         System.out.println("Verify Cart is Empty");
+    }
+
+    public void verifyaddressincheckoutpage() throws InterruptedException {
+        driver.get(url);
+        driver.findElement(g1).getText();
+        System.out.println("verify home page");
+        driver.findElement(g47).click();
+        driver.findElement(g6).sendKeys("Gayatri Raina");
+        driver.findElement(g7).sendKeys("gayatriraina4@gmail.com");
+        driver.findElement(g8).click();
+        Thread.sleep(4000);
+        WebElement r = driver.findElement(g9);
+        r.click();
+        driver.findElement(g10).sendKeys("Gayu@12345");
+        JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        js1.executeScript("window.scrollBy(0,1000)");
+        Select dropdown = new Select(driver.findElement(g11));
+        dropdown.selectByVisibleText("28");
+        Select dropdown1 = new Select(driver.findElement(g12));
+        dropdown1.selectByVisibleText("March");
+        Select dropdown2 = new Select(driver.findElement(g13));
+        dropdown2.selectByVisibleText("1997");
+        WebElement check1 = driver.findElement(g14);
+        check1.click();
+        WebElement check2 = driver.findElement(g15);
+        check2.click();
+        js1.executeScript("window.scrollBy(0,700)");
+        driver.findElement(g16).sendKeys("Gayatri");
+        driver.findElement(g17).sendKeys("Raina");
+        driver.findElement(g18).sendKeys("abc");
+        driver.findElement(g19).sendKeys("Kharadi");
+        driver.findElement(g20).sendKeys("Bypass");
+        driver.findElement(g21).sendKeys("Maharashtra");
+        driver.findElement(g22).sendKeys("Pune");
+        driver.findElement(g23).sendKeys("411014");
+        driver.findElement(g24).sendKeys("6006243294");
+        driver.findElement(g25).click();
+        driver.findElement(g26).getText();
+        System.out.println("Verify Account Created!");
+        driver.findElement(g27).click();
+        driver.findElement(g28).getText();
+        System.out.println("Verify Logged in as username");
+        js1.executeScript("window.scrollBy(0,700)");
+        driver.findElement(g44).click();
+        driver.findElement(g46).click();
+        driver.findElement(g45).getText();
+        System.out.println("Verify Cart page");
+        driver.findElement(g4).click();
+        driver.findElement(g51).getText();
+        System.out.println("Verify Delivery Address");
+        driver.findElement(g52).getText();
+        System.out.println("Verify Billing address");
+        driver.findElement(g40).click();
+        driver.findElement(g41).getText();
+        System.out.println("Verify Account Deleted!");
+        driver.findElement(g42).click();
     }
 }

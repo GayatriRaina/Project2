@@ -19,8 +19,8 @@ class AutomationUtilities {
 
     }
 
-//    @AfterTest
-//    public void Closure(){
-//        driver.quit();
-//    }
+    @AfterTest
+    public void Closure(){
+        driver.quit();
+    }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Apps">
+    <test name="Regression">
+        <classes>
+            <class name="example.Object.RegisterUser"/>
+            <class name="example.Object.Pages"/>
+            <class name="example.Object.Order"/>
+            <class name="example.Object.Product"/>
+            <class name="example.Object.Scoll"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

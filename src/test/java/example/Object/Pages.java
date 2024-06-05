@@ -54,6 +54,7 @@ public class Pages {
     By p38 = By.xpath("//*[@id=\"quantity\"]");
     By p39 = By.xpath("/html/body/section/div/div/div[2]/div[2]/div[2]/div/span/button");
     By p40 = By.xpath("//*[@id=\"cartModal\"]/div/div/div[2]/p[2]/a/u");
+
     public void contactus() throws InterruptedException {
         driver.get(url);
         driver.findElement(p1).getText();

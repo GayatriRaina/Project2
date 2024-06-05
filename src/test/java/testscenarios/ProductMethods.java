@@ -11,10 +11,11 @@ public class ProductMethods extends AutomationUtilities {
     public void VerifyProduct() throws InterruptedException {
         driver = super.Initialization();
         Product pr = new Product(driver);
-//        pr.viewcategory();
+        pr.viewcategory();
         pr.viewcartbrand();
         pr.searchproduct();
         pr.review();
         pr.recommendeditem();
+        pr.downloadinvoice();
     }
 }

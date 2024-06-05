@@ -5,13 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ea6be1e-7a88-4cda-b080-3a34577a0cdb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/example/Object/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testscenarios/ProductMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/example/Object/Scoll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testscenarios/ScrollMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testNG.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/example/Object/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/Object/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/Object/Pages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/Object/Pages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/example/Object/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/example/Object/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testscenarios/AutomationUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testscenarios/AutomationUtilities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testscenarios/OrderMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testscenarios/OrderMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testscenarios/ProductMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testscenarios/ProductMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/example/Object/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/Object/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/Object/Pages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/Object/Pages.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/example/Object/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/example/Object/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/testscenarios/OrderMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testscenarios/OrderMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/testscenarios/ProductMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testscenarios/ProductMethods.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +52,16 @@
     "TestNG.OrderMethods.Products.executor": "Run",
     "TestNG.PagesMethods.verify.executor": "Run",
     "TestNG.ProductMethods.VerifyProduct.executor": "Run",
+    "TestNG.ScrollMethods.down.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/Desktop/ExcelRProject2/Project2/Project2",
+    "last_opened_file_path": "C:/Users/HP/Desktop/ExcelRProject1/Project1",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.ProductMethods.VerifyProduct">
+  <component name="RunManager" selected="TestNG.ScrollMethods.down">
     <configuration name="OrderMethods.Products" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Project2" />
       <extension name="coverage">
@@ -107,8 +116,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScrollMethods.down" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Project2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testscenarios.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testscenarios" />
+      <option name="MAIN_CLASS_NAME" value="testscenarios.ScrollMethods" />
+      <option name="METHOD_NAME" value="down" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ScrollMethods.down" />
         <item itemvalue="TestNG.ProductMethods.VerifyProduct" />
         <item itemvalue="TestNG.OrderMethods.Products" />
         <item itemvalue="TestNG.PagesMethods.verify" />
