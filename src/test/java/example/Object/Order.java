@@ -69,9 +69,7 @@ public class Order {
     By g50 = By.xpath("//*[@id=\"empty_cart\"]/p/b");
     By g51 = By.xpath("//*[@id=\"address_delivery\"]/li[1]/h3");
     By g52 = By.xpath("//*[@id=\"address_invoice\"]/li[1]/h3");
-
-
-
+    
     public void registerwhilecheckout() throws InterruptedException {
         driver.get(url);
         driver.findElement(g1).getText();
