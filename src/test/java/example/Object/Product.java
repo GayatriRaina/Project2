@@ -93,8 +93,7 @@ public class Product {
     By g40 = By.xpath("//a[@href=\"/delete_account\"]");
     By g41 = By.xpath("//*[@id=\"form\"]/div/div/div/h2/b");
     By g42 = By.xpath("//a[@data-qa=\"continue-button\"]");
-
-
+    
     public void viewcategory() throws InterruptedException {
         driver.get(url);
         JavascriptExecutor js = (JavascriptExecutor) driver;
